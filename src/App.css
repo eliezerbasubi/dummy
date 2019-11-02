@@ -17,12 +17,19 @@ section{
 }
 /* HEADER STYLE START */
 .navbar{
+  display: block;
   background-color: #000000;
   padding: 0.5em;
 }
 .page-title{
   padding: 10px;
   color: #fff;
+}
+.ulist{
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  line-height: 1.5;
 }
 .ulist li{
   list-style-type: none;
@@ -55,29 +62,9 @@ section{
   -o-transform: translateX(0px);
   transform: translateX(0px);
 }
-.searchBar{
-  position: absolute;
-  right: 10%;
-  top: 10%;
-}
-.input_search, .btn_search{
-  padding: 5px 10px;
-  font-size: 1rem;
-}
-.btn_search{
-  background: #ffffff;
-  color: #000000;
-  border: none;
-  cursor: pointer;
-}
-.input_search{
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid;
-  background: transparent;
-  outline: none;
-  color: #fff;
+.spacer {
+  display: flex;
+  justify-content: space-between;
 }
 /* HEADER STYLE END */
 
@@ -93,7 +80,7 @@ section{
 }
 .banner{
   text-align: center;
-  height: 26rem;
+  /* height: 26rem; */
   background: url(./assets/images/banner.png) center fixed;
   background-size: cover;
 }
@@ -106,6 +93,8 @@ section{
 .inner-box, .profile_info{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.5em 0;
   justify-content: center;
 }
 .profile{
@@ -174,13 +163,15 @@ section{
 }
 .expertise {
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 1.2em;
 }
 .card{
   width: 13rem;
   background: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  margin-left: 10px;
+  margin: 2em;
   overflow: hidden;
   position: relative;
 }
@@ -197,13 +188,6 @@ section{
 }
 /* EXPERTISE STYLE END */
 
-/* ACCOMPLISHMENTS STYLE START */
-.accomplishments {
-  background: url(./assets/images/webdevelopment.jpeg) center center  fixed;
-  height: 20rem;
-}
-/* ACCOMPLISHMENTS STYLE END */
-
 /* Animation */
 
 @keyframes html { 0% { width: 0%; } 100% { width: 90%; } }
@@ -218,4 +202,19 @@ section{
   0%{
     transform: translateY(-20px);
   } 100% { transform: translateY(22px)}
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 786px){
+  .skills_cover{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box{
+    padding: .2rem;
+  }
+  .vertical-divider{
+    height: 2px;
+    width: 10rem;
+  }
 }

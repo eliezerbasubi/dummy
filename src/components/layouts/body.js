@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../layouts/style.css';
 import userAvatar from '../../assets/images/avatar.jpg';
 import imgHtml from '../../assets/images/html.png';
 import imgCss from '../../assets/images/css.png';
@@ -80,9 +81,7 @@ export default class Body extends Component{
                     </div>
                 </section>
 
-                <section className="accomplishments">
-                    
-                </section>
+                <Achievement/>
             </div>
         )
     }
@@ -99,6 +98,17 @@ export  class SkillBox extends Component {
                 </div>
             </div>
         )
+    }
+}
+
+export class Achievement extends Component {
+    render(){
+        return (
+            <section className="accomplishments">
+                <h4>I'm available for freelancing</h4>
+                <button>Hire me </button>
+            </section>
+        );
     }
 }
 

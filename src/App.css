@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family:  cursive,Verdana, sans-serif;
 }
+.fg-color-white{
+  color: #fff;
+}
 .nopadding {
   padding: 0;
   margin: 0.6em;
@@ -14,6 +17,14 @@
 }
 section{
   text-align: center;
+}
+.justify-content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+  color: #fff;
 }
 /* HEADER STYLE START */
 .navbar{
@@ -161,11 +172,16 @@ section{
 .expertise_section{
   height: 100%;
 }
-.expertise {
+.justify-inline-flex {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 1.2em;
+}
+.sizedbox {
+  margin: 2em;
+  position: relative;
+  padding: 1rem;
 }
 .card{
   width: 13rem;
@@ -206,6 +222,12 @@ section{
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 786px){
+  .ulist{
+    position: relative;
+  }
+  .ulist li{
+    padding: 5px;
+  }
   .skills_cover{
     display: flex;
     flex-wrap: wrap;

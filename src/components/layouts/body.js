@@ -57,7 +57,7 @@ export default class Body extends Component{
                     <h1>WHAT I DO</h1>
                     <p>The craft, my routine, my life. Things that I do for living. Things that describe who I am today.</p>
                     <h4>HERE ARE SOME OF MY EXPERTISE</h4>
-                    <div className="expertise">
+                    <div className="justify-inline-flex">
                         <div className="card">
                             <img alt="" src={imgWeb} className="img_expertise"/>
                             <h4>Web Development</h4>
@@ -81,7 +81,7 @@ export default class Body extends Component{
                     </div>
                 </section>
 
-                <Achievement/>
+                <Available/>
             </div>
         )
     }
@@ -101,12 +101,36 @@ export  class SkillBox extends Component {
     }
 }
 
-export class Achievement extends Component {
+export class Available extends Component {
     render(){
         return (
             <section className="accomplishments">
-                <h4>I'm available for freelancing</h4>
-                <button>Hire me </button>
+                <main className="justify-content-center freelancing">
+                    <div>
+                        <h2>I'm available for freelancing</h2>
+                        <button className="btn btn-primary">Hire me </button>
+                    </div>
+                </main>
+                <main>
+                    <div className="justify-inline-flex fg-color-white">
+                        <div className="sizedbox">
+                            <h2>201</h2>
+                            <p>CUP OF COFFEE</p>
+                        </div>
+                        <div className="sizedbox">
+                            <h2>14</h2>
+                            <p>PROJECTS</p>
+                        </div>
+                        <div className="sizedbox">
+                            <h2>10</h2>
+                            <p>CLIENTS</p>
+                        </div>
+                        <div className="sizedbox">
+                            <h2>500.000</h2>
+                            <p>LINES OF CODE</p>
+                        </div>
+                    </div>
+                </main>
             </section>
         );
     }

@@ -5,7 +5,7 @@ export default class Headers extends Component {
         return (
             <div className="navbar">
                 <div className="">
-                    <h1 className="page-title">E.B</h1>
+                    <h1 className="page-title">E.B.</h1>
                 </div>
                 <div className="navlist">
                     <ul className="ulist">

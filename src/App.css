@@ -183,6 +183,12 @@ section{
   position: relative;
   padding: 1rem;
 }
+.unshadowed-card{
+  box-shadow: none !important;
+}
+.unshadowed-card:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
+}
 .card{
   width: 13rem;
   background: #ffffff;
@@ -190,6 +196,9 @@ section{
   margin: 2em;
   overflow: hidden;
   position: relative;
+}
+.card-body{
+  padding: 0 .4em;
 }
 .img_expertise{
   height: 10rem;
@@ -217,7 +226,7 @@ section{
 @keyframes rxslider{
   0%{
     transform: translateY(-20px);
-  } 100% { transform: translateY(22px)}
+  } 100% { transform: translateY(22px);}
 }
 
 /* MEDIA QUERIES */

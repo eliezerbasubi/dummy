@@ -20,3 +20,16 @@
       padding: 4rem;
   }
   /* ACCOMPLISHMENTS STYLE END */
+
+  /* PROJECTS STYLE START */
+  .dot::before {
+      content: "";
+      /* width: 50px; */
+      /* height: 5px; */
+      background-color: orange;
+      /* border-radius: 20%; */
+      margin: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  /* PROJECTS STYLE END */

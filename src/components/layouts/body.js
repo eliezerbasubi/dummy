@@ -14,6 +14,7 @@ import imgGraphic from '../../assets/images/graphic.png';
 import imgWeb from '../../assets/images/webdevelopment.jpeg';
 import imgAndroid from '../../assets/images/androiddev.jpg';
 import imgCross from '../../assets/images/cross_platform.jpg';
+import { projects } from '../../data/data';
 
 export default class Body extends Component{
     state = {
@@ -120,6 +121,9 @@ export class Available extends Component {
 }
 
 export class Projects extends Component{
+    state= {
+        projects //De-structure projects variable.
+    }
     render(){
         return (
             <section className="section_project">
@@ -127,91 +131,17 @@ export class Projects extends Component{
                 <p>The craft, my routine, my life. Things that I do for living. Things that describe who I am today.</p>
                 <h5>PROJECTS I HAVE COMPLETED</h5>
                 <div className="justify-inline-flex">
-                    <div className="card unshadowed-card">
-                        <img alt="" src={imgWeb} className="img_expertise"/>
-                        <span className="">JavaScript</span>
-                        <span className="dot">Nodejs</span>
-                        {/* <span className="dot">PostgresSQL</span> */}
-                        <h4>WayFarer</h4>
-                        <div className="card-body">
-                            <p>WayFarer is a public bus transportation service.</p>
+                    {this.state.projects.map((project, index) =>
+                        <div className="card unshadowed-card" key={index}>
+                            <img alt="" src={ project.screenshot } className="img_expertise"/>
+                            { project.tools.map((tool, index) => <span className={ index === 0 ? "" :  "dot"} key={index}>{ tool }</span> )}
+                            <h4>{project.name}</h4>
+                            <div className="card-body">
+                                <p>{ project.description }</p>
+                            </div>
+                            <div className="incolor_border"></div>
                         </div>
-                        <div className="incolor_border"></div>
-                    </div>
-
-                    <div className="card unshadowed-card">
-                        <img alt="" src={imgAndroid} className="img_expertise"/>
-                        <span className="">Android</span>
-                        <span className="dot">Java</span>
-                        <span className="dot">Firebase</span>
-                        <h4>Online Shop</h4>
-                        <div className="card-body">
-                        <p>An android app that allows users to create and manage shops.</p>
-                        </div>
-                        <div className="incolor_border"></div>
-                    </div>
-
-                    <div className="card unshadowed-card">
-                        <img alt="" src={imgCross} className="img_expertise"/>
-                        <span className="">Flutter</span>
-                        <span className="dot">Dart</span>
-                        <span className="dot">Firebase</span>
-                        <h4>Cake Delivery System</h4>
-                        <div className="card-body">
-                        <p>A cross-platform mobile application for delivering cakes in real time.</p>
-                        </div>
-                        <div className="incolor_border"></div>
-                    </div>
-                    <div className="card unshadowed-card">
-                        <img alt="" src={imgGraphic} className="img_expertise"/>
-                        <span className="">PHP</span>
-                        <span className="dot">MySQL</span>
-                        <h4>Student Web Portal</h4>
-                        <div className="card-body">
-                        <p>A web portal application which allows students to view their results. </p>
-                        </div>
-                        <div className="incolor_border"></div>
-                    </div>
-                    <div className="card unshadowed-card">
-                        <img alt="" src={imgWeb} className="img_expertise"/>
-                        <span className="">PHP</span>
-                        <span className="dot">MySQL</span>
-                        <h4>JChat</h4>
-                        <div className="card-body">
-                        <p>A social media app to connect people from different places and different backgrounds. </p>
-                        </div>
-                        <div className="incolor_border"></div>
-                    </div>
-                    <div className="card unshadowed-card">
-                        <img alt="" src={imgAndroid} className="img_expertise"/>
-                        <span className="">Android</span>
-                        <span className="dot">Firebase</span>
-                        <h4>JChat</h4>
-                        <div className="card-body">
-                        <p>A social media app to connect people from different places and different backgrounds. </p>
-                        </div>
-                        <div className="incolor_border"></div>
-                    </div>
-                    <div className="card unshadowed-card">
-                        <img alt="" src={imgCross} className="img_expertise"/>
-                        <span className="">Flutter</span>
-                        <span className="dot">Nodejs</span>
-                        <h4>Fashion</h4>
-                        <div className="card-body">
-                            <p>A cross-platform mobile app for fashion designers to showcase their modals</p>
-                        </div>
-                        <div className="incolor_border"></div>
-                    </div>
-                    <div className="card unshadowed-card">
-                        <img alt="" src={imgGraphic} className="img_expertise"/>
-                        <span className="">PHP</span>
-                        <span className="dot">MySQL</span>
-                        <h4>SelfDoctor</h4>
-                        <div className="card-body">
-                            <p>An android app for treatment under emergent disease circumstances.</p>
-                        </div>
-                        <div className="incolor_border"></div>
-                    </div>
+                    )}
                 </div>
             </section>
         );

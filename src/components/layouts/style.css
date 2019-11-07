@@ -33,3 +33,84 @@
       padding-right: 5px;
   }
   /* PROJECTS STYLE END */
+
+  /* EDUCATION STYLE START */
+  #education{
+      padding: .4rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  /* ACCORDION STYLE */
+  .accordion > input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+    /* left: -100vw; */
+  }
+  .accordion .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+  }
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    height: auto;
+    overflow: visible;
+  }
+  .accordion label {
+    display: block;
+  }
+  .accordion {
+    width: 70%;
+    margin-bottom: 1em;
+    position: relative;
+  }
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+  }
+  .accordion .collapse {
+    margin: 0;
+    font: 1.125em/1.2em;
+    /* line-height: 1.2em; */
+  }
+  .accordion label {
+    color: #333;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 15px;
+    background: #e8e8e8;
+  }
+  
+  .accordion label:hover,
+  .accordion label:focus {
+    background: #d8d8d8;
+  }
+  
+  .accordion .collapse label:before {
+    /* font-family: 'fontawesome'; */
+    content: "+";
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    font: .58em/1.556em;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .collapse label:before {
+    content: "-";
+  }
+  .education-period{
+    width: 300px;
+    background: #2b4de2;
+    padding: .58em;
+  }
+  .education-details{
+    background: #fff;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  /* EDUCATION STYLE END */

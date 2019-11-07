@@ -2,10 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family:  cursive,Verdana, sans-serif;
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  font-weight: 200;
 }
 .fg-color-white{
   color: #fff;
+}
+.bg-gray {
+  background-color: #d1cece;
 }
 .nopadding {
   padding: 0;
@@ -99,7 +103,7 @@ section{
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-  animation: rxslider 2s linear;
+  animation: rxslider 1s linear;
 }
 .inner-box, .profile_info{
   display: flex;
@@ -109,7 +113,7 @@ section{
   justify-content: center;
 }
 .profile{
-  animation: rxslider 2s linear;
+  animation: rxslider 1s linear;
 }
 .info {
   width: 21rem;
@@ -156,15 +160,15 @@ section{
   float: left;
   background: #2187e7;
 }
-.html { width: 90%; animation: html 2s linear;}
-.css { width: 90%; animation: html 2s linear; }
-.php { width: 70%; animation: php 2s linear;}
-.javascript { width: 95%; animation: javascript 2s linear;}
-.node { width: 95%; animation: javascript 2s linear;}
-.dart { width: 80%; animation: dart 2s linear;}
-.flutter { width: 100%; animation: flutter 2s linear;}
-.react { width: 65%; animation: react 2s linear;}
-.java { width: 75%; animation: java 2s linear;}
+.html { width: 90%; animation: html 1s linear;}
+.css { width: 90%; animation: html 1s linear; }
+.php { width: 70%; animation: php 1s linear;}
+.javascript { width: 95%; animation: javascript 1s linear;}
+.node { width: 95%; animation: javascript 1s linear;}
+.dart { width: 80%; animation: dart 1s linear;}
+.flutter { width: 100%; animation: flutter 1s linear;}
+.react { width: 65%; animation: react 1s linear;}
+.java { width: 75%; animation: java 1s linear;}
 
 /* BANNER STYLE END */
 
@@ -177,6 +181,13 @@ section{
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 1.2em;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-content-left {
+  justify-content: left !important;
 }
 .sizedbox {
   margin: 2em;
@@ -201,7 +212,7 @@ section{
   padding: 0 .4em;
 }
 .img_expertise{
-  height: 10rem;
+  /* height: 10rem; */
   width: inherit;
 }
 .incolor_border {
@@ -248,4 +259,7 @@ section{
     height: 2px;
     width: 10rem;
   }
+  /* .flex{
+    flex-wrap:wrap;
+  } */
 }

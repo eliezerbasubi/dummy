@@ -263,3 +263,10 @@ section{
     flex-wrap:wrap;
   } */
 }
+
+@media screen and (max-width: 580px){
+  .programming_icon {
+    width: 5rem;
+    height: 5rem;
+  }
+}

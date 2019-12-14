@@ -30,7 +30,7 @@ So far, this project has been developed using:
 
 #### `Mocha` and `Chai`
 
-### Deployment
+## Deployment
 
 This Portfolio website is deployed on: https://eliezerbasubi.github.io/MyPortFolio
 
